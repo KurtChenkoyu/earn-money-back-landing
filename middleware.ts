@@ -42,6 +42,11 @@ const intlMiddleware = createMiddleware(routing)
 export default function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
   
+  // Skip API routes
+  if (pathname.startsWith('/api')) {
+    return NextResponse.next()
+  }
+  
   // If accessing root, redirect to detected locale
   if (pathname === '/') {
     const detectedLocale = detectLocale(request)
@@ -54,6 +59,11 @@ export default function middleware(request: NextRequest) {
 
 export const config = {
   // Match only internationalized pathnames
-  matcher: ['/', '/(zh-TW|en)/:path*']
+  matcher: [
+    // Match all pathnames except for
+    // - … if they start with `/api`, `/_next` or `/_vercel`
+    // - … the ones containing a dot (e.g. `favicon.ico`)
+    '/((?!api|_next|_vercel|.*\\..*).*)'
+  ]
 }
 
