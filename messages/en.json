@@ -1,0 +1,238 @@
+{
+  "hero": {
+    "headline": "Kids Earn Money by Learning Vocabulary",
+    "subtitle": "Kids earn real money by mastering vocabulary. Parents invest upfront, kids earn it back.",
+    "description": "Use their earnings for allowance, toys, savings, or anything they want!",
+    "cta": "Join the Waitlist - Get 50% off Beta"
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "A simple 4-step process that motivates kids to learn while giving parents control",
+    "step1": {
+      "title": "Parent Deposits",
+      "description": "Parents deposit NT$500-1,000 into a platform-controlled account. This becomes the earning pool for your child."
+    },
+    "step2": {
+      "title": "Child Learns",
+      "description": "Kids learn vocabulary through interactive flashcards and daily word lists. They master 10-20 words per day."
+    },
+    "step3": {
+      "title": "Child Earns",
+      "description": "Kids take verification quizzes (Day 1, 3, and 7) to prove they learned. Points unlock as they pass tests."
+    },
+    "step4": {
+      "title": "Parent Withdraws",
+      "description": "Parents can withdraw earned cash anytime. Use it for allowance, toys, savings, or anything your child wants!"
+    }
+  },
+  "benefitsParents": {
+    "title": "Benefits for Parents",
+    "subtitle": "Finally, a way to motivate your kids to learn without the daily battles",
+    "motivate": {
+      "title": "Motivate Learning",
+      "description": "Financial incentive makes kids actually want to learn vocabulary instead of fighting you on it."
+    },
+    "habits": {
+      "title": "Build Good Habits",
+      "description": "Kids develop daily learning habits that stick. They see the connection between effort and reward."
+    },
+    "control": {
+      "title": "Family Control",
+      "description": "You decide how to reward your child. Allowance, toys, savings, or special treats - it's your choice."
+    },
+    "progress": {
+      "title": "Track Progress",
+      "description": "See exactly what your child is learning and how well they're retaining the vocabulary."
+    },
+    "pricing": {
+      "title": "Fair Pricing",
+      "description": "Beta special: Start with just NT$500-1,000. No hidden fees, no subscriptions."
+    },
+    "safe": {
+      "title": "Safe & Secure",
+      "description": "Platform-controlled verification ensures kids actually learn, not just game the system."
+    }
+  },
+  "benefitsKids": {
+    "title": "Benefits for Kids",
+    "subtitle": "Learning becomes rewarding - literally! Earn money while building skills",
+    "money": {
+      "title": "Earn Real Money",
+      "description": "Not points or badges - actual cash you can spend on anything you want!"
+    },
+    "choice": {
+      "title": "Choose Your Rewards",
+      "description": "Want a new game? Save for something big? It's your money, your choice!"
+    },
+    "accomplished": {
+      "title": "Feel Accomplished",
+      "description": "See your progress grow as you master more words. You're building real skills!"
+    },
+    "pace": {
+      "title": "Learn at Your Pace",
+      "description": "Daily word lists that fit your schedule. Learn when it works for you."
+    },
+    "fair": {
+      "title": "Fair Tests",
+      "description": "Multiple choice quizzes that prove you really learned, not just memorized."
+    },
+    "confidence": {
+      "title": "Build Confidence",
+      "description": "Every word you master is a win. Watch your vocabulary grow and feel proud!"
+    }
+  },
+  "pricing": {
+    "title": "Beta Pricing",
+    "subtitle": "Special launch pricing for early adopters - 50% off regular pricing",
+    "tier": {
+      "name": "Beta Special",
+      "price": "NT$500-1,000",
+      "description": "Start small, see results"
+    },
+    "features": {
+      "daily": "10-20 words per day",
+      "sessions": "Daily learning sessions",
+      "quizzes": "Verification quizzes (Day 1, 3, 7)",
+      "withdrawal": "Direct cash withdrawal",
+      "dashboard": "Parent dashboard",
+      "tracking": "Progress tracking",
+      "discount": "50% off regular pricing"
+    },
+    "note": "This is a deposit that your child can earn back through learning. You maintain full control over withdrawals.",
+    "regular": "Regular pricing will be NT$1,000-2,000 after beta period ends"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about Earn Money Back",
+    "earning": {
+      "question": "How does the earning system work?",
+      "answer": "Parents deposit NT$500-1,000 upfront. Kids learn vocabulary daily and take verification quizzes on Day 1, 3, and 7. As they pass tests, points unlock. Parents can withdraw the earned cash anytime."
+    },
+    "incomplete": {
+      "question": "What if my child doesn't complete the learning?",
+      "answer": "The deposit remains in your account. You can withdraw unused funds at any time. There's no penalty for not completing - we want learning to be positive!"
+    },
+    "words": {
+      "question": "How many words will my child learn?",
+      "answer": "Kids learn 10-20 words per day. The platform includes 3,000-4,000 carefully selected words from CEFR standards, Taiwan MOE curriculum, and high-frequency vocabulary."
+    },
+    "safe": {
+      "question": "Is this safe for kids?",
+      "answer": "Yes! Parents control all deposits and withdrawals. The platform uses secure verification to ensure kids actually learn, not just game the system. All accounts are parent-owned."
+    },
+    "launch": {
+      "question": "When will the beta launch?",
+      "answer": "We're targeting a 4-6 week launch timeline. Join the waitlist to be notified as soon as we're ready! Beta users get 50% off regular pricing."
+    },
+    "age": {
+      "question": "What age is this for?",
+      "answer": "The platform is designed for elementary and junior high school students (ages 6-15). All accounts must be created and managed by parents (Taiwan's age of majority is 20)."
+    },
+    "earnings": {
+      "question": "Can I use the earnings for anything?",
+      "answer": "Yes! Parents have full control. Use earnings for allowance, toys, savings accounts, special treats, or anything your child wants. It's your money, your choice."
+    },
+    "withdraw": {
+      "question": "How do I withdraw money?",
+      "answer": "Parents can request withdrawals anytime through the parent dashboard. Funds are transferred directly to your bank account. Processing typically takes 3-5 business days."
+    }
+  },
+  "waitlist": {
+    "title": "Join the Waitlist",
+    "subtitle": "Be among the first to try Earn Money Back. Get 50% off beta pricing!",
+    "success": {
+      "title": "You're on the list!",
+      "message": "We'll send you an email as soon as we're ready to launch. Get ready to motivate your kids to learn!",
+      "another": "Join another email"
+    },
+    "form": {
+      "email": "Email Address",
+      "numKids": "Number of Children",
+      "submit": "Join Waitlist - Get 50% Off Beta",
+      "loading": "Joining...",
+      "privacy": "By joining, you agree to receive updates about our beta launch.",
+      "privacyLink": "View Privacy Policy"
+    },
+    "options": {
+      "one": "1 child",
+      "two": "2 children",
+      "three": "3 children",
+      "four": "4+ children"
+    }
+  },
+  "footer": {
+    "tagline": "Kids earn money by learning vocabulary. Parents invest upfront, kids earn it back.",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "contact": "Contact",
+    "questions": "Questions? Reach out to us at",
+    "copyright": "© {year} Earn Money Back. All rights reserved.",
+    "taiwan": "Designed for Taiwan market. Parent accounts required for users under 20."
+  },
+  "language": {
+    "switch": "Switch Language",
+    "zh-TW": "繁體中文",
+    "en": "English"
+  },
+  "privacy": {
+    "back": "Back to Home",
+    "title": "Privacy Policy",
+    "section1": {
+      "title": "1. Information We Collect",
+      "intro": "We collect the following information when you join our waitlist:",
+      "email": "Email address",
+      "emailDesc": "Used to send you updates about our beta launch",
+      "numKids": "Number of children",
+      "numKidsDesc": "Helps us understand family size and plan our beta program"
+    },
+    "section2": {
+      "title": "2. How We Use Your Information",
+      "intro": "We use the information you provide to:",
+      "use1": "Send you updates about our beta launch and product development",
+      "use2": "Notify you when the platform is ready for beta testing",
+      "use3": "Plan our beta program based on family sizes",
+      "use4": "Send you relevant information about the Earn Money Back platform",
+      "noShare": "We do not sell, rent, or share your personal information with third parties for marketing purposes."
+    },
+    "section3": {
+      "title": "3. Data Storage and Security",
+      "content": "Your information is stored securely using industry-standard email service providers (ConvertKit or Mailchimp) that comply with data protection regulations. We implement appropriate technical and organizational measures to protect your personal information."
+    },
+    "section4": {
+      "title": "4. Your Rights",
+      "intro": "You have the right to:",
+      "access": "Access",
+      "accessDesc": "Request a copy of the personal information we hold about you",
+      "update": "Update",
+      "updateDesc": "Correct any inaccurate information",
+      "delete": "Delete",
+      "deleteDesc": "Request deletion of your personal information",
+      "optout": "Opt-out",
+      "optoutDesc": "Unsubscribe from our emails at any time using the unsubscribe link in every email"
+    },
+    "section5": {
+      "title": "5. Opt-Out / Unsubscribe",
+      "intro": "You can opt-out of receiving emails from us at any time by:",
+      "method1": "Clicking the \"Unsubscribe\" link at the bottom of any email we send you",
+      "method2": "Contacting us directly at the email address provided below",
+      "note": "Once you unsubscribe, you will no longer receive updates about our beta launch, but your email will remain in our system for record-keeping purposes unless you request deletion."
+    },
+    "section6": {
+      "title": "6. Children's Privacy",
+      "content": "This waitlist is for parents only. We do not knowingly collect personal information from children under the age of 20 (Taiwan's age of majority). When our platform launches, we will implement appropriate parental consent mechanisms in compliance with Taiwan's Personal Data Protection Act (PDPA)."
+    },
+    "section7": {
+      "title": "7. Changes to This Policy",
+      "content": "We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the \"Last Updated\" date."
+    },
+    "section8": {
+      "title": "8. Contact Us",
+      "intro": "If you have any questions about this Privacy Policy or wish to exercise your rights, please contact us at:",
+      "email": "Email:",
+      "subject": "Subject:",
+      "subjectText": "Privacy Policy Inquiry"
+    },
+    "lastUpdated": "Last Updated:"
+  }
+}
+

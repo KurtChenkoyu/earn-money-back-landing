@@ -1,28 +1,34 @@
+'use client'
+
+import { useTranslations } from 'next-intl'
+
 export default function HowItWorks() {
+  const t = useTranslations('howItWorks')
+  
   const steps = [
     {
       number: '1',
-      title: 'Parent Deposits',
-      description: 'Parents deposit NT$500-1,000 into a platform-controlled account. This becomes the earning pool for your child.',
       icon: '💰',
+      titleKey: 'step1.title',
+      descKey: 'step1.description',
     },
     {
       number: '2',
-      title: 'Child Learns',
-      description: 'Kids learn vocabulary through interactive flashcards and daily word lists. They master 10-20 words per day.',
       icon: '📚',
+      titleKey: 'step2.title',
+      descKey: 'step2.description',
     },
     {
       number: '3',
-      title: 'Child Earns',
-      description: 'Kids take verification quizzes (Day 1, 3, and 7) to prove they learned. Points unlock as they pass tests.',
       icon: '✅',
+      titleKey: 'step3.title',
+      descKey: 'step3.description',
     },
     {
       number: '4',
-      title: 'Parent Withdraws',
-      description: 'Parents can withdraw earned cash anytime. Use it for allowance, toys, savings, or anything your child wants!',
       icon: '💵',
+      titleKey: 'step4.title',
+      descKey: 'step4.description',
     },
   ]
 
@@ -31,10 +37,10 @@ export default function HowItWorks() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            How It Works
+            {t('title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            A simple 4-step process that motivates kids to learn while giving parents control
+            {t('subtitle')}
           </p>
         </div>
 
@@ -49,10 +55,10 @@ export default function HowItWorks() {
                 {step.number}
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                {step.title}
+                {t(step.titleKey)}
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                {step.description}
+                {t(step.descKey)}
               </p>
             </div>
           ))}

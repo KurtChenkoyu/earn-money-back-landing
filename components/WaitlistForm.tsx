@@ -1,9 +1,13 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
+import { usePathname } from '@/i18n/routing'
 import { trackEvent } from '@/lib/analytics'
 
 export default function WaitlistForm() {
+  const t = useTranslations('waitlist')
+  const pathname = usePathname()
   const [email, setEmail] = useState('')
   const [numKids, setNumKids] = useState('1')
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
@@ -55,25 +59,25 @@ export default function WaitlistForm() {
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Join the Waitlist
+            {t('title')}
           </h2>
           <p className="text-xl text-primary-100">
-            Be among the first to try Earn Money Back. Get 50% off beta pricing!
+            {t('subtitle')}
           </p>
         </div>
 
         {status === 'success' ? (
           <div className="bg-white text-gray-900 rounded-lg p-8 text-center">
             <div className="text-6xl mb-4">🎉</div>
-            <h3 className="text-2xl font-bold mb-4">You're on the list!</h3>
+            <h3 className="text-2xl font-bold mb-4">{t('success.title')}</h3>
             <p className="text-gray-600 mb-6">
-              We'll send you an email as soon as we're ready to launch. Get ready to motivate your kids to learn!
+              {t('success.message')}
             </p>
             <button
               onClick={() => setStatus('idle')}
               className="text-primary-600 hover:text-primary-700 font-semibold"
             >
-              Join another email
+              {t('success.another')}
             </button>
           </div>
         ) : (
@@ -81,7 +85,7 @@ export default function WaitlistForm() {
             <div className="space-y-6">
               <div>
                 <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
-                  Email Address *
+                  {t('form.email')} *
                 </label>
                 <input
                   type="email"
@@ -96,7 +100,7 @@ export default function WaitlistForm() {
 
               <div>
                 <label htmlFor="numKids" className="block text-sm font-semibold text-gray-700 mb-2">
-                  Number of Children *
+                  {t('form.numKids')} *
                 </label>
                 <select
                   id="numKids"
@@ -105,10 +109,10 @@ export default function WaitlistForm() {
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-gray-900"
                 >
-                  <option value="1">1 child</option>
-                  <option value="2">2 children</option>
-                  <option value="3">3 children</option>
-                  <option value="4">4+ children</option>
+                  <option value="1">{t('options.one')}</option>
+                  <option value="2">{t('options.two')}</option>
+                  <option value="3">{t('options.three')}</option>
+                  <option value="4">{t('options.four')}</option>
                 </select>
               </div>
 
@@ -123,13 +127,13 @@ export default function WaitlistForm() {
                 disabled={status === 'loading'}
                 className="w-full bg-primary-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {status === 'loading' ? 'Joining...' : 'Join Waitlist - Get 50% Off Beta'}
+                {status === 'loading' ? t('form.loading') : t('form.submit')}
               </button>
 
               <p className="text-xs text-gray-500 text-center">
-                By joining, you agree to receive updates about our beta launch. 
-                <a href="/privacy" className="text-primary-600 hover:text-primary-700 ml-1">
-                  View Privacy Policy
+                {t('form.privacy')}{' '}
+                <a href={`${pathname}/privacy`} className="text-primary-600 hover:text-primary-700 ml-1">
+                  {t('form.privacyLink')}
                 </a>
               </p>
             </div>
