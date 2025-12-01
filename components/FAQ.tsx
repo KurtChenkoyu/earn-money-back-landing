@@ -7,7 +7,7 @@ export default function FAQ() {
   const t = useTranslations('faq')
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
-  const faqKeys = ['earning', 'incomplete', 'words', 'safe', 'launch', 'age', 'earnings', 'withdraw']
+  const faqKeys = ['teaching', 'different', 'verify', 'scholarship', 'scam', 'withdraw', 'methodology', 'gap']
 
   return (
     <section className="py-20 bg-white">

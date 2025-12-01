@@ -6,11 +6,11 @@ export default function BenefitsKids() {
   const t = useTranslations('benefitsKids')
   
   const benefits = [
-    { icon: '🎮', key: 'money' },
-    { icon: '🎁', key: 'choice' },
-    { icon: '🏆', key: 'accomplished' },
-    { icon: '⏰', key: 'pace' },
-    { icon: '🎯', key: 'fair' },
+    { icon: '🎓', key: 'scholarship' },
+    { icon: '📊', key: 'recognition' },
+    { icon: '📝', key: 'portfolio' },
+    { icon: '🔍', key: 'diagnostic' },
+    { icon: '🕸️', key: 'structure' },
     { icon: '🌟', key: 'confidence' },
   ]
 

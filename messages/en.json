@@ -1,145 +1,150 @@
 {
   "hero": {
-    "headline": "Kids Earn Money by Learning Vocabulary",
-    "subtitle": "Kids earn real money by mastering vocabulary. Parents invest upfront, kids earn it back.",
-    "description": "Use their earnings for allowance, toys, savings, or anything they want!",
-    "cta": "Join the Waitlist - Get 50% off Beta"
+    "headline": "Is Your Child Just Memorizing Words, or Truly Building Language Sense?",
+    "subtitle": "Taiwan's First Knowledge Graph Learning Health Check. No grades, just data.",
+    "description": "We verify if children recognize foundation elements, not test if they learned",
+    "valueProp1": "Visualize the Gap: See exactly how far they are from the 7,000-word High School goal",
+    "valueProp2": "Document the Process: Automatically generate Autonomous Learning evidence for 108 Portfolio",
+    "valueProp3": "Risk-Free: 100% Scholarship Refund if they meet verification standards",
+    "cta": "Free Diagnostic Test - 30 Foundation Elements",
+    "trustBar": "🔒 Withdraw anytime | ✓ Verified $5M+ | 📊 99.54% accuracy",
+    "platformName": "Foundation Verification Platform"
   },
   "howItWorks": {
     "title": "How It Works",
-    "subtitle": "A simple 4-step process that motivates kids to learn while giving parents control",
+    "subtitle": "We don't teach English, we verify if children recognize foundation elements",
     "step1": {
-      "title": "Parent Deposits",
-      "description": "Parents deposit NT$500-1,000 into a platform-controlled account. This becomes the earning pool for your child."
+      "title": "Child Already Learns at School/Cram School",
+      "description": "Children learn English at school or cram school. We don't teach, we only verify results."
     },
     "step2": {
-      "title": "Child Learns",
-      "description": "Kids learn vocabulary through interactive flashcards and daily word lists. They master 10-20 words per day."
+      "title": "Verify Foundation Element Recognition",
+      "description": "We verify if children recognize foundation elements (words, phrases, idioms). Use Knowledge Graph structure, not alphabetical order."
     },
     "step3": {
-      "title": "Child Earns",
-      "description": "Kids take verification quizzes (Day 1, 3, and 7) to prove they learned. Points unlock as they pass tests."
+      "title": "Pass Verification, Unlock Scholarship",
+      "description": "Children pass verification tests (spaced repetition on Day 3, 7, 14), proving long-term recognition ability. Meet verification standards to unlock verification scholarship."
     },
     "step4": {
-      "title": "Parent Withdraws",
-      "description": "Parents can withdraw earned cash anytime. Use it for allowance, toys, savings, or anything your child wants!"
+      "title": "Parents See Real Learning Results",
+      "description": "Parents see which foundation elements children truly recognize, which areas need strengthening. This is the receipt for your education investment."
     }
   },
   "benefitsParents": {
     "title": "Benefits for Parents",
-    "subtitle": "Finally, a way to motivate your kids to learn without the daily battles",
+    "subtitle": "Verify education investment results, know if children truly recognize foundation elements",
+    "verify": {
+      "title": "Verify Foundation Recognition",
+      "description": "Verify if children recognize foundation elements, not test if they learned. More realistic assessment method."
+    },
+    "identify": {
+      "title": "Identify Learning Gaps",
+      "description": "Clearly see which foundation elements children recognize, which areas need strengthening. Diagnostic report, not report card."
+    },
+    "structure": {
+      "title": "More Realistic Structure",
+      "description": "Use Knowledge Graph structure (relationship-based), not alphabetical order. More aligned with how language learning actually works."
+    },
+    "roi": {
+      "title": "See Investment ROI",
+      "description": "Know if education investment actually worked. Spent so much on cram school, did it actually work?"
+    },
     "motivate": {
-      "title": "Motivate Learning",
-      "description": "Financial incentive makes kids actually want to learn vocabulary instead of fighting you on it."
+      "title": "Encourage Continued Exposure",
+      "description": "Verification scholarship encourages children to continue exposure to foundation elements, building recognition foundation."
     },
-    "habits": {
-      "title": "Build Good Habits",
-      "description": "Kids develop daily learning habits that stick. They see the connection between effort and reward."
-    },
-    "control": {
-      "title": "Family Control",
-      "description": "You decide how to reward your child. Allowance, toys, savings, or special treats - it's your choice."
-    },
-    "progress": {
-      "title": "Track Progress",
-      "description": "See exactly what your child is learning and how well they're retaining the vocabulary."
-    },
-    "pricing": {
-      "title": "Fair Pricing",
-      "description": "Beta special: Start with just NT$500-1,000. No hidden fees, no subscriptions."
-    },
-    "safe": {
-      "title": "Safe & Secure",
-      "description": "Platform-controlled verification ensures kids actually learn, not just game the system."
+    "ahead": {
+      "title": "Stay Ahead of Official Numbers",
+      "description": "Official numbers say 4,000-5,000 words, but reality expects 8,000+. We help you verify if your child is truly ahead."
     }
   },
   "benefitsKids": {
     "title": "Benefits for Kids",
-    "subtitle": "Learning becomes rewarding - literally! Earn money while building skills",
-    "money": {
-      "title": "Earn Real Money",
-      "description": "Not points or badges - actual cash you can spend on anything you want!"
+    "subtitle": "Verification scholarship encourages continued exposure to foundation elements, building recognition foundation",
+    "scholarship": {
+      "title": "Verification Scholarship",
+      "description": "Pass verification of foundation element recognition, earn verification scholarship. This is recognition of learning results."
     },
-    "choice": {
-      "title": "Choose Your Rewards",
-      "description": "Want a new game? Save for something big? It's your money, your choice!"
+    "recognition": {
+      "title": "See Recognition Progress",
+      "description": "Clearly see which foundation elements you recognize, which still need exposure. Knowledge Graph visualizes your learning trajectory."
     },
-    "accomplished": {
-      "title": "Feel Accomplished",
-      "description": "See your progress grow as you master more words. You're building real skills!"
+    "portfolio": {
+      "title": "Learning Portfolio Evidence",
+      "description": "Automatically generate learning logs, become strong evidence for 108 learning portfolio. Prove your autonomous learning process."
     },
-    "pace": {
-      "title": "Learn at Your Pace",
-      "description": "Daily word lists that fit your schedule. Learn when it works for you."
+    "diagnostic": {
+      "title": "Diagnostic Report",
+      "description": "Not a report card, but a diagnostic report. Tells you which areas need strengthening, not that you failed."
     },
-    "fair": {
-      "title": "Fair Tests",
-      "description": "Multiple choice quizzes that prove you really learned, not just memorized."
+    "structure": {
+      "title": "Knowledge Graph Structure",
+      "description": "Uses relationship structure, not alphabetical order. More aligned with how language learning actually works."
     },
     "confidence": {
       "title": "Build Confidence",
-      "description": "Every word you master is a win. Watch your vocabulary grow and feel proud!"
+      "description": "Every recognized foundation element is progress. Watch your Knowledge Graph grow and feel proud!"
     }
   },
   "pricing": {
-    "title": "Beta Pricing",
-    "subtitle": "Special launch pricing for early adopters - 50% off regular pricing",
+    "title": "Verification Scholarship System",
+    "subtitle": "Pass verification, get full scholarship refund",
     "tier": {
       "name": "Beta Special",
       "price": "NT$500-1,000",
-      "description": "Start small, see results"
+      "description": "Verification Scholarship Deposit"
     },
     "features": {
-      "daily": "10-20 words per day",
-      "sessions": "Daily learning sessions",
-      "quizzes": "Verification quizzes (Day 1, 3, 7)",
-      "withdrawal": "Direct cash withdrawal",
-      "dashboard": "Parent dashboard",
-      "tracking": "Progress tracking",
-      "discount": "50% off regular pricing"
+      "daily": "Verify 10-20 foundation elements per day",
+      "sessions": "Knowledge Graph structure verification",
+      "quizzes": "Spaced repetition verification (Day 3, 7, 14)",
+      "withdrawal": "Withdraw verification scholarship anytime",
+      "dashboard": "Parent diagnostic dashboard",
+      "tracking": "Learning trajectory tracking",
+      "discount": "Beta special: Deposit 1000, get 500 bonus"
     },
-    "note": "This is a deposit that your child can earn back through learning. You maintain full control over withdrawals.",
+    "note": "This is verification scholarship deposit. Children can get full refund after passing verification. You maintain full control over withdrawals.",
     "regular": "Regular pricing will be NT$1,000-2,000 after beta period ends"
   },
   "faq": {
     "title": "Frequently Asked Questions",
-    "subtitle": "Everything you need to know about Earn Money Back",
-    "earning": {
-      "question": "How does the earning system work?",
-      "answer": "Parents deposit NT$500-1,000 upfront. Kids learn vocabulary daily and take verification quizzes on Day 1, 3, and 7. As they pass tests, points unlock. Parents can withdraw the earned cash anytime."
+    "subtitle": "Everything you need to know about Foundation Verification Platform",
+    "teaching": {
+      "question": "Do you teach English?",
+      "answer": "No, we don't teach English. We are a verification platform, not a teaching platform. Children learn elsewhere (school, cram school), we verify if they recognize foundation elements."
     },
-    "incomplete": {
-      "question": "What if my child doesn't complete the learning?",
-      "answer": "The deposit remains in your account. You can withdraw unused funds at any time. There's no penalty for not completing - we want learning to be positive!"
+    "different": {
+      "question": "How are you different from teaching apps?",
+      "answer": "Teaching apps teach, we verify results. We provide objective third-party verification, verifying if your education investment actually worked."
     },
-    "words": {
-      "question": "How many words will my child learn?",
-      "answer": "Kids learn 10-20 words per day. The platform includes 3,000-4,000 carefully selected words from CEFR standards, Taiwan MOE curriculum, and high-frequency vocabulary."
+    "verify": {
+      "question": "What do you verify?",
+      "answer": "We verify if children recognize foundation elements (words, phrases, idioms). We verify recognition ability, not deep understanding (that's our future goal). Recognition is the foundation of understanding."
     },
-    "safe": {
-      "question": "Is this safe for kids?",
-      "answer": "Yes! Parents control all deposits and withdrawals. The platform uses secure verification to ensure kids actually learn, not just game the system. All accounts are parent-owned."
+    "scholarship": {
+      "question": "How does the verification scholarship work?",
+      "answer": "Parents deposit NT$500-1,000 as verification scholarship deposit. After children pass verification tests, scholarship unlocks. Parents can withdraw anytime. Meet verification standards, 100% refund."
     },
-    "launch": {
-      "question": "When will the beta launch?",
-      "answer": "We're targeting a 4-6 week launch timeline. Join the waitlist to be notified as soon as we're ready! Beta users get 50% off regular pricing."
-    },
-    "age": {
-      "question": "What age is this for?",
-      "answer": "The platform is designed for elementary and junior high school students (ages 6-15). All accounts must be created and managed by parents (Taiwan's age of majority is 20)."
-    },
-    "earnings": {
-      "question": "Can I use the earnings for anything?",
-      "answer": "Yes! Parents have full control. Use earnings for allowance, toys, savings accounts, special treats, or anything your child wants. It's your money, your choice."
+    "scam": {
+      "question": "Isn't this a scam?",
+      "answer": "No. We are an educational verification platform, not a cash flow verification platform. Your money is in platform escrow account, unlocks after child verification. Business model is completely transparent, withdrawable anytime."
     },
     "withdraw": {
-      "question": "How do I withdraw money?",
-      "answer": "Parents can request withdrawals anytime through the parent dashboard. Funds are transferred directly to your bank account. Processing typically takes 3-5 business days."
+      "question": "Can money really be withdrawn anytime?",
+      "answer": "Yes. Zero handling fees, arrives within 1 day after linking bank account. This is your money, not ours. You have full control."
+    },
+    "methodology": {
+      "question": "Why is your verification method better?",
+      "answer": "We use Knowledge Graph structure (relationship-based), not alphabetical order. Spaced repetition verification (Day 3, 7, 14) ensures long-term recognition, not short-term memory. 99.54% confidence, not 25% guessing rate."
+    },
+    "gap": {
+      "question": "Why stay ahead of official numbers?",
+      "answer": "Official numbers say senior high needs 4,000-5,000 words, but reality expects 8,000+. Meeting only official numbers = actually behind. We help you verify if your child is truly ahead, ready to face real expectations."
     }
   },
   "waitlist": {
     "title": "Join the Waitlist",
-    "subtitle": "Be among the first to try Earn Money Back. Get 50% off beta pricing!",
+    "subtitle": "Be among the first to try Foundation Verification Platform. Beta special: Deposit 1000, get 500 bonus!",
     "success": {
       "title": "You're on the list!",
       "message": "We'll send you an email as soon as we're ready to launch. Get ready to motivate your kids to learn!",
@@ -161,18 +166,48 @@
     }
   },
   "footer": {
-    "tagline": "Kids earn money by learning vocabulary. Parents invest upfront, kids earn it back.",
+    "tagline": "Recognition counts. Everything else, we don't exaggerate.",
     "legal": "Legal",
     "privacy": "Privacy Policy",
     "contact": "Contact",
     "questions": "Questions? Reach out to us at",
-    "copyright": "© {year} Earn Money Back. All rights reserved.",
+    "copyright": "© {year} Foundation Verification Platform. All rights reserved.",
     "taiwan": "Designed for Taiwan market. Parent accounts required for users under 20."
   },
   "language": {
     "switch": "Switch Language",
     "zh-TW": "繁體中文",
     "en": "English"
+  },
+  "parentQuestions": {
+    "title": "Three Questions Parents Ask Most",
+    "question1": "Spent so much on cram school, did it actually work?",
+    "answer1": "We provide objective third-party verification. Verify if your education investment actually worked.",
+    "question2": "Why can't school tests show real level?",
+    "answer2": "Because schools test short-term memory, we test long-term recognition. Spaced repetition ensures it's not just memorization.",
+    "question3": "How are you different from teaching apps?",
+    "answer3": "They teach, we verify the results. We don't teach English, we verify."
+  },
+  "vocabularyCliff": {
+    "title": "Where on This Curve Is Your Child Right Now?",
+    "subtitle": "Schools prepare them for the 1,200-word floor. Exams demand the 7,000-word ceiling.",
+    "table": {
+      "stage": "Stage",
+      "official": "Official Requirement",
+      "reality": "Reality Gap",
+      "words": "words",
+      "junior": "Junior High",
+      "comfortable": "Comfortable zone",
+      "senior": "Senior High",
+      "listed": "(officially listed)",
+      "actuallyNeed": "Actually need 7,000+ words",
+      "cliff": "The Cliff",
+      "gap": "5,800-word gap",
+      "crash": "Where students crash in Grade 10"
+    },
+    "diagnostic": "We provide a diagnostic report telling you which areas your child needs to strengthen, not telling you they failed.",
+    "keyQuestion": "Where on this curve is your child right now?",
+    "cta": "Start Diagnosis"
   },
   "privacy": {
     "back": "Back to Home",
