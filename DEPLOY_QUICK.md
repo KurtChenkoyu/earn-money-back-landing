@@ -7,7 +7,7 @@
 If you have a GitHub account:
 
 ```bash
-cd /Users/kurtchen/earn-money-back-project/landing-page
+cd /Users/kurtchen/lexicraft-project/landing-page
 
 # Create a new repo on GitHub first, then:
 git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
@@ -38,7 +38,7 @@ After deployment, in Vercel dashboard:
 
 ### Step 1: Login
 ```bash
-cd /Users/kurtchen/earn-money-back-project/landing-page
+cd /Users/kurtchen/lexicraft-project/landing-page
 vercel login
 ```
 (Opens browser for authentication)

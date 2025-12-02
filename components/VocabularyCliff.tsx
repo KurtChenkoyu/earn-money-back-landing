@@ -1,9 +1,15 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/routing'
+import { trackEvent } from '@/lib/analytics'
 
 export default function VocabularyCliff() {
   const t = useTranslations('vocabularyCliff')
+  
+  const handleSurveyClick = () => {
+    trackEvent('vocabulary_cliff_survey_clicked')
+  }
 
   return (
     <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
@@ -57,13 +63,18 @@ export default function VocabularyCliff() {
             <p className="text-lg font-semibold text-gray-900 mb-4">
               {t('keyQuestion')}
             </p>
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+            <Link
+              href="/survey"
+              onClick={handleSurveyClick}
+              className="inline-block px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white rounded-lg font-bold tracking-wider shadow-lg shadow-cyan-900/20 transition-all"
+            >
               {t('cta')}
-            </button>
+            </Link>
           </div>
         </div>
       </div>
     </section>
   )
 }
+
 

@@ -6,12 +6,12 @@ export default function BenefitsParents() {
   const t = useTranslations('benefitsParents')
   
   const benefits = [
-    { icon: '🎯', key: 'motivate' },
-    { icon: '💪', key: 'habits' },
-    { icon: '👨‍👩‍👧‍👦', key: 'control' },
-    { icon: '📊', key: 'progress' },
-    { icon: '💰', key: 'pricing' },
-    { icon: '🛡️', key: 'safe' },
+    { icon: '🔍', key: 'verify' },
+    { icon: '📊', key: 'identify' },
+    { icon: '🕸️', key: 'structure' },
+    { icon: '💰', key: 'roi' },
+    { icon: '⛏️', key: 'motivate' },
+    { icon: '📈', key: 'ahead' },
   ]
 
   return (

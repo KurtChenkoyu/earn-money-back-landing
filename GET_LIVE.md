@@ -8,20 +8,20 @@ Your landing page is **ready** and running locally. Here's how to get it live:
 
 **If you already have a GitHub repo:**
 ```bash
-cd /Users/kurtchen/earn-money-back-project/landing-page
+cd /Users/kurtchen/lexicraft-project/landing-page
 git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
 git push -u origin main
 ```
 
 **If you need to create a GitHub repo:**
 1. Go to https://github.com/new
-2. Name it: `earn-money-back-landing`
+2. Name it: `lexicraft-landing`
 3. **Don't** check any boxes (no README, .gitignore, or license)
 4. Click "Create repository"
 5. Then run:
 ```bash
-cd /Users/kurtchen/earn-money-back-project/landing-page
-git remote add origin https://github.com/YOUR_USERNAME/earn-money-back-landing.git
+cd /Users/kurtchen/lexicraft-project/landing-page
+git remote add origin https://github.com/YOUR_USERNAME/lexicraft-landing.git
 git branch -M main
 git push -u origin main
 ```
@@ -30,7 +30,7 @@ git push -u origin main
 
 1. Go to **https://vercel.com/new**
 2. Click **"Continue with GitHub"** (or GitLab/Bitbucket)
-3. Select your repository: `earn-money-back-landing`
+3. Select your repository: `lexicraft-landing`
 4. Vercel will auto-detect Next.js settings ✅
 5. Click **"Deploy"**
 6. Wait 1-2 minutes for deployment
@@ -66,7 +66,7 @@ NEXT_PUBLIC_POSTHOG_HOST=https://app.posthog.com
 
 ### Step 1: Login
 ```bash
-cd /Users/kurtchen/earn-money-back-project/landing-page
+cd /Users/kurtchen/lexicraft-project/landing-page
 vercel login
 ```
 (Opens browser for authentication)
@@ -84,7 +84,7 @@ Same as Option 1, Step 3 above.
 ## ✅ After Deployment
 
 1. **Test your live site:**
-   - Visit your Vercel URL (e.g., `https://earn-money-back-landing.vercel.app`)
+   - Visit your Vercel URL (e.g., `https://lexicraft-landing.vercel.app`)
    - Test the waitlist form
    - Check mobile responsiveness
 
@@ -111,7 +111,7 @@ After deployment, your site will be live at:
 open http://localhost:3000
 
 # Push to GitHub (if repo exists)
-cd /Users/kurtchen/earn-money-back-project/landing-page
+cd /Users/kurtchen/lexicraft-project/landing-page
 git push
 
 # Deploy via CLI (after login)

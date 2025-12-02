@@ -1,4 +1,4 @@
-# Deployment Guide - Earn Money Back Landing Page
+# Deployment Guide - LexiCraft Landing Page
 
 ## Quick Start
 

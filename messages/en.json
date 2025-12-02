@@ -1,33 +1,42 @@
 {
   "hero": {
-    "headline": "Is Your Child Just Memorizing Words, or Truly Building Language Sense?",
-    "subtitle": "Taiwan's First Knowledge Graph Learning Health Check. No grades, just data.",
-    "description": "We verify if children recognize foundation elements, not test if they learned",
-    "valueProp1": "Visualize the Gap: See exactly how far they are from the 7,000-word High School goal",
-    "valueProp2": "Document the Process: Automatically generate Autonomous Learning evidence for 108 Portfolio",
-    "valueProp3": "Risk-Free: 100% Scholarship Refund if they meet verification standards",
-    "cta": "Free Diagnostic Test - 30 Foundation Elements",
+    "headline": "You Invest, They Mine. Knowledge and Wealth, Inherited Together.",
+    "subtitle": "LexiCraft • 字塊所: Taiwan's First Knowledge Asset Exchange. Turn tuition into unlockable blocks.",
+    "description": "We don't sell courses, we sell future assets. Every word is a block waiting to be unlocked.",
+    "valueProp1": "Block Trust: Your money stays locked in blocks until they prove recognition",
+    "valueProp2": "Brain Mining: Kids unlock blocks through validation, earning real rewards",
+    "valueProp3": "Asset Exchange: Transform education spending into transferable knowledge assets",
+    "cta": "CHECK ASSET VALUE",
+    "ctaSecondary": "Join Waitlist",
     "trustBar": "🔒 Withdraw anytime | ✓ Verified $5M+ | 📊 99.54% accuracy",
-    "platformName": "Foundation Verification Platform"
+    "platformName": "LexiCraft • 字塊所"
+  },
+  "navbar": {
+    "surveyLink": "START AUDIT",
+    "surveyLinkZh": "啟動字塊探勘"
   },
   "howItWorks": {
     "title": "How It Works",
-    "subtitle": "We don't teach English, we verify if children recognize foundation elements",
+    "subtitle": "Transform tuition spending into unlockable knowledge assets",
     "step1": {
-      "title": "Child Already Learns at School/Cram School",
-      "description": "Children learn English at school or cram school. We don't teach, we only verify results."
+      "title": "Purchase Block Trust Package",
+      "description": "Parents buy a Block Trust Package (e.g., 1000-word core set). Money is locked in escrow, not spent. Status: 🔒 Locked (Funds in Trust)."
     },
     "step2": {
-      "title": "Verify Foundation Element Recognition",
-      "description": "We verify if children recognize foundation elements (words, phrases, idioms). Use Knowledge Graph structure, not alphabetical order."
+      "title": "See Locked Blocks",
+      "description": "Kids see a wall of gray locked blocks. Each block shows its value (e.g., $5 NTD). Click to start validation: \"Value $5, Start Mining?\""
     },
     "step3": {
-      "title": "Pass Verification, Unlock Scholarship",
-      "description": "Children pass verification tests (spaced repetition on Day 3, 7, 14), proving long-term recognition ability. Meet verification standards to unlock verification scholarship."
+      "title": "Mining Action (Validation)",
+      "description": "Validation quiz = mining with pickaxe. Answer correctly = critical hit. System uses adversarial traps (Adapt vs Adopt) to ensure real recognition."
     },
     "step4": {
-      "title": "Parents See Real Learning Results",
-      "description": "Parents see which foundation elements children truly recognize, which areas need strengthening. This is the receipt for your education investment."
+      "title": "Unlock Gold Blocks",
+      "description": "Success! Block flips to gold ✨. Account balance +$5. Kids feel: \"I earned this with my brain!\" Achievement unlocked."
+    },
+    "step5": {
+      "title": "Redeem & Track",
+      "description": "Parents receive notification: \"Your child unlocked 50% of trust funds. Learning progress: 500 solid blocks.\" This is the receipt for your investment."
     }
   },
   "benefitsParents": {
@@ -87,28 +96,28 @@
     }
   },
   "pricing": {
-    "title": "Verification Scholarship System",
-    "subtitle": "Pass verification, get full scholarship refund",
+    "title": "Block Trust Packages",
+    "subtitle": "Transform tuition into unlockable knowledge assets",
     "tier": {
       "name": "Beta Special",
       "price": "NT$500-1,000",
-      "description": "Verification Scholarship Deposit"
+      "description": "Block Trust Package Deposit"
     },
     "features": {
-      "daily": "Verify 10-20 foundation elements per day",
-      "sessions": "Knowledge Graph structure verification",
-      "quizzes": "Spaced repetition verification (Day 3, 7, 14)",
-      "withdrawal": "Withdraw verification scholarship anytime",
-      "dashboard": "Parent diagnostic dashboard",
-      "tracking": "Learning trajectory tracking",
-      "discount": "Beta special: Deposit 1000, get 500 bonus"
+      "daily": "Unlock 10-20 blocks per day through validation",
+      "sessions": "Knowledge Graph structure mining",
+      "quizzes": "Spaced repetition validation (Day 3, 7, 14)",
+      "withdrawal": "Withdraw trust funds anytime",
+      "dashboard": "Parent asset dashboard",
+      "tracking": "Block unlock progress tracking",
+      "discount": "Beta special: Deposit 1000, get 500 bonus blocks"
     },
-    "note": "This is verification scholarship deposit. Children can get full refund after passing verification. You maintain full control over withdrawals.",
+    "note": "This is a Block Trust Package. Your money stays in escrow until blocks are unlocked. Children unlock blocks through validation, then funds are released. You maintain full control over withdrawals.",
     "regular": "Regular pricing will be NT$1,000-2,000 after beta period ends"
   },
   "faq": {
     "title": "Frequently Asked Questions",
-    "subtitle": "Everything you need to know about Foundation Verification Platform",
+    "subtitle": "Everything you need to know about LexiCraft • 字塊所",
     "teaching": {
       "question": "Do you teach English?",
       "answer": "No, we don't teach English. We are a verification platform, not a teaching platform. Children learn elsewhere (school, cram school), we verify if they recognize foundation elements."
@@ -122,8 +131,16 @@
       "answer": "We verify if children recognize foundation elements (words, phrases, idioms). We verify recognition ability, not deep understanding (that's our future goal). Recognition is the foundation of understanding."
     },
     "scholarship": {
-      "question": "How does the verification scholarship work?",
-      "answer": "Parents deposit NT$500-1,000 as verification scholarship deposit. After children pass verification tests, scholarship unlocks. Parents can withdraw anytime. Meet verification standards, 100% refund."
+      "question": "How does the Block Trust work?",
+      "answer": "Parents purchase a Block Trust Package (NT$500-1,000). Money stays in escrow, locked in blocks. Kids unlock blocks through validation quizzes. Once unlocked, funds are released to the child's account. Parents can withdraw anytime. Meet validation standards, 100% of trust funds unlocked."
+    },
+    "mining": {
+      "question": "What is Brain Mining?",
+      "answer": "Brain Mining is our gamified validation system. Kids see locked blocks (gray), each with a value. They use validation quizzes (the pickaxe) to unlock blocks. Correct answers = critical hits. Unlocked blocks turn gold and cash is deposited. It's not forced study, it's legal mining."
+    },
+    "trust": {
+      "question": "How is this different from regular tuition?",
+      "answer": "Regular tuition: You pay, money is gone, hope they learned. Block Trust: You invest, money stays in escrow, they unlock it through proof of learning. It transforms education spending from consumption into asset transfer. Your money isn't spent until they prove recognition."
     },
     "scam": {
       "question": "Isn't this a scam?",
@@ -166,12 +183,12 @@
     }
   },
   "footer": {
-    "tagline": "Recognition counts. Everything else, we don't exaggerate.",
+    "tagline": "You invest, they mine. Knowledge and wealth, inherited together.",
     "legal": "Legal",
     "privacy": "Privacy Policy",
     "contact": "Contact",
     "questions": "Questions? Reach out to us at",
-    "copyright": "© {year} Foundation Verification Platform. All rights reserved.",
+    "copyright": "© {year} LexiCraft • 字塊所. All rights reserved.",
     "taiwan": "Designed for Taiwan market. Parent accounts required for users under 20."
   },
   "language": {
@@ -207,7 +224,7 @@
     },
     "diagnostic": "We provide a diagnostic report telling you which areas your child needs to strengthen, not telling you they failed.",
     "keyQuestion": "Where on this curve is your child right now?",
-    "cta": "Start Diagnosis"
+    "cta": "Diagnose My Gap"
   },
   "privacy": {
     "back": "Back to Home",
@@ -226,7 +243,7 @@
       "use1": "Send you updates about our beta launch and product development",
       "use2": "Notify you when the platform is ready for beta testing",
       "use3": "Plan our beta program based on family sizes",
-      "use4": "Send you relevant information about the Earn Money Back platform",
+      "use4": "Send you relevant information about the LexiCraft platform",
       "noShare": "We do not sell, rent, or share your personal information with third parties for marketing purposes."
     },
     "section3": {

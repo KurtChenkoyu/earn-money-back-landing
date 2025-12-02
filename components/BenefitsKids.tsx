@@ -30,7 +30,7 @@ export default function BenefitsKids() {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-primary-50 to-primary-100 rounded-lg p-6 hover:shadow-lg transition-shadow"
+              className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-lg p-6 hover:shadow-lg transition-shadow"
             >
               <div className="text-4xl mb-4">{benefit.icon}</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">

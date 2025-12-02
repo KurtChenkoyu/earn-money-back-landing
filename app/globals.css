@@ -30,5 +30,56 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Animation Utilities for LexiSurvey */
+  
+  .animate-in {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .fade-in {
+    animation-name: fadeIn;
+  }
+
+  .slide-in-from-bottom-4 {
+    --tw-enter-translate-y: 1rem;
+    animation-name: slideInBottom;
+  }
+
+  /* Shimmer Effect for Loading States */
+  .animate-shimmer {
+    animation: shimmer 2s linear infinite;
+    background-size: 200% 100%;
+    background-image: linear-gradient(
+      to right,
+      var(--tw-gradient-from) 0%,
+      var(--tw-gradient-via) 50%,
+      var(--tw-gradient-to) 100%
+    );
+  }
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInBottom {
+  from {
+    transform: translateY(var(--tw-enter-translate-y));
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  from { background-position: 200% 0; }
+  to { background-position: -200% 0; }
 }
 

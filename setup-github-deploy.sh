@@ -19,7 +19,7 @@ echo "📦 To deploy via Vercel web interface:"
 echo ""
 echo "1. Create a new repository on GitHub:"
 echo "   - Go to https://github.com/new"
-echo "   - Name it: earn-money-back-landing (or any name you prefer)"
+echo "   - Name it: lexicraft-landing (or any name you prefer)"
 echo "   - Don't initialize with README, .gitignore, or license"
 echo "   - Click 'Create repository'"
 echo ""
@@ -45,8 +45,8 @@ echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo ""
     read -p "Enter your GitHub username: " GITHUB_USER
-    read -p "Enter your repository name (default: earn-money-back-landing): " REPO_NAME
-    REPO_NAME=${REPO_NAME:-earn-money-back-landing}
+    read -p "Enter your repository name (default: lexicraft-landing): " REPO_NAME
+    REPO_NAME=${REPO_NAME:-lexicraft-landing}
     
     echo ""
     echo "Run these commands:"

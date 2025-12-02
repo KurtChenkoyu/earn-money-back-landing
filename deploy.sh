@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Deployment script for Earn Money Back Landing Page
+# Deployment script for LexiCraft Landing Page
 
-echo "🚀 Deploying Earn Money Back Landing Page to Vercel"
+echo "🚀 Deploying LexiCraft Landing Page to Vercel"
 echo ""
 
 # Check if Vercel CLI is installed

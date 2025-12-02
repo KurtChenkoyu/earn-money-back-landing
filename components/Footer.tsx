@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-white text-lg font-semibold mb-4">Earn Money Back</h3>
+            <h3 className="text-white text-lg font-semibold mb-4 font-mono">LexiCraft • 字塊所</h3>
             <p className="text-sm">
               {t('tagline')}
             </p>
@@ -36,7 +36,7 @@ export default function Footer() {
                 href="mailto:support@earnmoneyback.com"
                 className="text-primary-400 hover:text-primary-300"
               >
-                support@earnmoneyback.com
+                support@lexicraft.com
               </a>
             </p>
           </div>

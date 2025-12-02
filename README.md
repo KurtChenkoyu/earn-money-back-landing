@@ -1,6 +1,6 @@
-# Earn Money Back - Landing Page
+# LexiCraft - Landing Page
 
-Landing page for the Earn Money Back MVP waitlist collection.
+Landing page for the LexiCraft MVP waitlist collection.
 
 ## Features
 
@@ -171,5 +171,5 @@ The site will be live at `https://your-project.vercel.app`
 
 ## Support
 
-For questions or issues, contact: support@earnmoneyback.com
+For questions or issues, contact: support@lexicraft.com
 

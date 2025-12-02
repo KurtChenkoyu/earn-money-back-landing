@@ -8,27 +8,33 @@ export default function HowItWorks() {
   const steps = [
     {
       number: '1',
-      icon: '💰',
+      icon: '🔒',
       titleKey: 'step1.title',
       descKey: 'step1.description',
     },
     {
       number: '2',
-      icon: '📚',
+      icon: '🧱',
       titleKey: 'step2.title',
       descKey: 'step2.description',
     },
     {
       number: '3',
-      icon: '✅',
+      icon: '⛏️',
       titleKey: 'step3.title',
       descKey: 'step3.description',
     },
     {
       number: '4',
-      icon: '💵',
+      icon: '✨',
       titleKey: 'step4.title',
       descKey: 'step4.description',
+    },
+    {
+      number: '5',
+      icon: '💎',
+      titleKey: 'step5.title',
+      descKey: 'step5.description',
     },
   ]
 
@@ -44,7 +50,7 @@ export default function HowItWorks() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {steps.map((step, index) => (
             <div
               key={index}

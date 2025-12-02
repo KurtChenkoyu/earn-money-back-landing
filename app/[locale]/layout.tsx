@@ -7,6 +7,7 @@ import { routing } from '@/i18n/routing'
 import '../globals.css'
 import { AnalyticsProvider } from '@/components/AnalyticsProvider'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
+import Navbar from '@/components/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,7 +26,7 @@ export async function generateMetadata({
   return {
     title: locale === 'zh-TW' 
       ? '賺錢學單字 - 孩子學單字就能賺錢'
-      : 'Earn Money Back - Kids Earn Money by Learning Vocabulary',
+      : 'LexiCraft - Kids Earn Money by Learning Vocabulary',
     description: locale === 'zh-TW'
       ? '孩子透過學習單字賺取真實金錢。家長先投資，孩子努力賺回來。'
       : 'Kids earn real money by mastering vocabulary. Parents invest upfront, kids earn it back.',
@@ -56,6 +57,7 @@ export default async function LocaleLayout({
       <body className={inter.className}>
         <NextIntlClientProvider messages={messages}>
           <AnalyticsProvider>
+            <Navbar />
             <LanguageSwitcher currentLocale={locale} />
             {children}
           </AnalyticsProvider>

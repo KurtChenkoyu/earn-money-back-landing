@@ -6,7 +6,7 @@ export default function Pricing() {
   const t = useTranslations('pricing')
 
   return (
-    <section className="py-20 bg-gradient-to-br from-primary-50 to-primary-100">
+    <section className="py-20 bg-gradient-to-br from-cyan-50 to-blue-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
@@ -18,15 +18,15 @@ export default function Pricing() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-2xl mx-auto">
-          <div className="bg-white rounded-xl p-8 shadow-lg ring-4 ring-primary-500 transform scale-105">
-            <div className="bg-primary-600 text-white text-sm font-semibold px-4 py-2 rounded-full inline-block mb-4">
+          <div className="bg-white rounded-xl p-8 shadow-lg ring-4 ring-cyan-500 transform scale-105">
+            <div className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-full inline-block mb-4">
               ⭐ {t('tier.name')}
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-2">
               {t('tier.name')}
             </h3>
             <div className="mb-4">
-              <span className="text-4xl font-bold text-primary-600">
+              <span className="text-4xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
                 {t('tier.price')}
               </span>
               <span className="text-gray-600 ml-2">deposit</span>
@@ -34,43 +34,43 @@ export default function Pricing() {
             <p className="text-gray-600 mb-6">{t('tier.description')}</p>
             <ul className="space-y-3 mb-8">
               <li className="flex items-start">
-                <svg className="w-6 h-6 text-primary-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-cyan-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
                 <span className="text-gray-700">{t('features.daily')}</span>
               </li>
               <li className="flex items-start">
-                <svg className="w-6 h-6 text-primary-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-cyan-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
                 <span className="text-gray-700">{t('features.sessions')}</span>
               </li>
               <li className="flex items-start">
-                <svg className="w-6 h-6 text-primary-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-cyan-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
                 <span className="text-gray-700">{t('features.quizzes')}</span>
               </li>
               <li className="flex items-start">
-                <svg className="w-6 h-6 text-primary-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-cyan-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
                 <span className="text-gray-700">{t('features.withdrawal')}</span>
               </li>
               <li className="flex items-start">
-                <svg className="w-6 h-6 text-primary-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-cyan-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
                 <span className="text-gray-700">{t('features.dashboard')}</span>
               </li>
               <li className="flex items-start">
-                <svg className="w-6 h-6 text-primary-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-cyan-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
                 <span className="text-gray-700">{t('features.tracking')}</span>
               </li>
               <li className="flex items-start">
-                <svg className="w-6 h-6 text-primary-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-cyan-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
                 <span className="text-gray-700">{t('features.discount')}</span>
