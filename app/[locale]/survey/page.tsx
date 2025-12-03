@@ -18,7 +18,6 @@ export default function SurveyPage() {
         to ensure it takes full viewport height and centers correctly.
       */}
       <SurveyEngine 
-        initialCefr="B1" 
         onExit={handleExit} 
       />
     </main>

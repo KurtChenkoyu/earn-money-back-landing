@@ -5,18 +5,24 @@ import { surveyApi, SurveyResult, QuestionPayload, TriMetricReport } from '../..
 import MultiSelectMatrix from './MultiSelectMatrix'
 import SurveyResultDashboard from './SurveyResultDashboard'
 import SurveyProgress from './SurveyProgress'
+import PreSurveyCalibration from './PreSurveyCalibration'
 
 interface SurveyEngineProps {
   initialCefr?: string
   onExit: () => void
 }
 
-const SurveyEngine: React.FC<SurveyEngineProps> = ({ initialCefr = 'B1', onExit }) => {
+const SurveyEngine: React.FC<SurveyEngineProps> = ({ initialCefr, onExit }) => {
   // --- State Machine ---
-  const [status, setStatus] = useState<'init' | 'loading' | 'active' | 'complete' | 'error'>('init')
+  const [status, setStatus] = useState<'calibration' | 'init' | 'loading' | 'active' | 'complete' | 'error'>('calibration')
   const [sessionId, setSessionId] = useState<string | null>(null)
   const [currentQuestion, setCurrentQuestion] = useState<QuestionPayload | null>(null)
   const [finalMetrics, setFinalMetrics] = useState<TriMetricReport | null>(null)
+  
+  // Calibration state
+  const [selectedCefr, setSelectedCefr] = useState<string | undefined>(undefined)
+  const [userAge, setUserAge] = useState<number | undefined>(undefined)
+  const [calibrationComplete, setCalibrationComplete] = useState<boolean>(false)
   
   // Progress Tracking
   const [phase, setPhase] = useState<number>(1)
@@ -56,12 +62,27 @@ const SurveyEngine: React.FC<SurveyEngineProps> = ({ initialCefr = 'B1', onExit 
     }
   }, [])
 
+  // Handle calibration completion
+  const handleCalibrationComplete = useCallback((cefrLevel: string | undefined, age?: number) => {
+    console.log('Calibration complete:', { cefrLevel, age })
+    setSelectedCefr(cefrLevel) // Can be undefined for SKIP option
+    setUserAge(age)
+    setCalibrationComplete(true)
+    setStatus('init')
+  }, [])
+
   // 1. Start Survey
   useEffect(() => {
     const initSurvey = async () => {
+      if (!calibrationComplete) {
+        return
+      }
+
       try {
+        console.log('Starting survey with CEFR:', selectedCefr || 'undefined (default)')
         setStatus('loading')
-        const result = await surveyApi.start(initialCefr)
+        const result = await surveyApi.start(selectedCefr)
+        console.log('Survey start result:', result)
         handleApiResult(result)
       } catch (err) {
         console.error('Survey Start Failed', err)
@@ -69,10 +90,10 @@ const SurveyEngine: React.FC<SurveyEngineProps> = ({ initialCefr = 'B1', onExit 
       }
     }
 
-    if (status === 'init') {
+    if (status === 'init' && calibrationComplete) {
       initSurvey()
     }
-  }, [initialCefr, status, handleApiResult])
+  }, [selectedCefr, status, calibrationComplete, handleApiResult])
 
   // 3. Submit Answer
   const handleAnswerSubmit = useCallback(
@@ -102,6 +123,11 @@ const SurveyEngine: React.FC<SurveyEngineProps> = ({ initialCefr = 'B1', onExit 
 
   // --- Render Logic ---
 
+  // Show calibration form first
+  if (status === 'calibration') {
+    return <PreSurveyCalibration onComplete={handleCalibrationComplete} />
+  }
+
   if (status === 'loading' || status === 'init') {
     return (
       <div className="flex items-center justify-center h-screen bg-gray-950 text-cyan-500 font-mono animate-pulse">
@@ -112,8 +138,15 @@ const SurveyEngine: React.FC<SurveyEngineProps> = ({ initialCefr = 'B1', onExit 
 
   if (status === 'error') {
     return (
-      <div className="flex flex-col items-center justify-center h-screen bg-gray-950 text-red-500">
-        <h2 className="text-xl font-bold">CONNECTION LOST</h2>
+      <div className="flex flex-col items-center justify-center h-screen bg-gray-950 text-red-500 px-4">
+        <h2 className="text-xl font-bold mb-4">SURVEY INITIALIZATION FAILED</h2>
+        <p className="text-red-400 mb-4 text-center max-w-md">
+          There was an error starting the survey. Please check the console for details.
+        </p>
+        <div className="text-sm text-gray-400 mb-6 text-center max-w-md">
+          <p>Selected CEFR Level: {selectedCefr || 'Not set'}</p>
+          <p>Calibration Complete: {calibrationComplete ? 'Yes' : 'No'}</p>
+        </div>
         <button
           onClick={onExit}
           className="mt-4 px-4 py-2 border border-red-500 hover:bg-red-900/20 rounded"

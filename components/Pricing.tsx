@@ -1,6 +1,7 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/routing'
 
 export default function Pricing() {
   const t = useTranslations('pricing')
@@ -76,6 +77,14 @@ export default function Pricing() {
                 <span className="text-gray-700">{t('features.discount')}</span>
               </li>
             </ul>
+
+            {/* CTA Button */}
+            <Link
+              href="/dashboard"
+              className="block w-full px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white rounded-lg font-bold text-center transition-all shadow-lg hover:shadow-xl"
+            >
+              立即開始 →
+            </Link>
           </div>
         </div>
 

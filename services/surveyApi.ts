@@ -32,11 +32,11 @@ export const surveyApi = {
    * @returns SurveyResult with first question or error
    */
   start: async (
-    cefrLevel: string = 'B1',
+    cefrLevel?: string,
     userId?: string
   ): Promise<SurveyResult> => {
     const response = await axios.post<SurveyResult>(`${API_BASE}/start`, {
-      cefr_level: cefrLevel,
+      cefr_level: cefrLevel || undefined, // Pass undefined for default behavior (market median)
       user_id: userId,
     })
     return response.data

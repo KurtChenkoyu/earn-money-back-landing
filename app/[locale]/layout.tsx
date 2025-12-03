@@ -6,7 +6,6 @@ import { notFound } from 'next/navigation'
 import { routing } from '@/i18n/routing'
 import '../globals.css'
 import { AnalyticsProvider } from '@/components/AnalyticsProvider'
-import LanguageSwitcher from '@/components/LanguageSwitcher'
 import Navbar from '@/components/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -57,8 +56,7 @@ export default async function LocaleLayout({
       <body className={inter.className}>
         <NextIntlClientProvider messages={messages}>
           <AnalyticsProvider>
-            <Navbar />
-            <LanguageSwitcher currentLocale={locale} />
+            <Navbar currentLocale={locale} />
             {children}
           </AnalyticsProvider>
         </NextIntlClientProvider>
