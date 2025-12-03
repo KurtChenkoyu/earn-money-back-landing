@@ -11,11 +11,22 @@ export async function GET(request: Request) {
 
   if (code) {
     const supabase = await createClient()
-    await supabase.auth.exchangeCodeForSession(code)
+    const { data, error } = await supabase.auth.exchangeCodeForSession(code)
+    
+    if (error) {
+      console.error('Error exchanging code for session:', error)
+      // Redirect to login on error
+      return NextResponse.redirect(new URL(`/${locale}/login?error=auth_failed`, requestUrl.origin))
+    }
+    
+    // Verify session was created
+    if (!data.session) {
+      console.error('No session created after code exchange')
+      return NextResponse.redirect(new URL(`/${locale}/login?error=no_session`, requestUrl.origin))
+    }
   }
 
   // Always redirect to dashboard after successful auth
-  // The 'next' parameter might not be preserved through OAuth flow
   const redirectUrl = `/${locale}/dashboard`
   
   return NextResponse.redirect(new URL(redirectUrl, requestUrl.origin))

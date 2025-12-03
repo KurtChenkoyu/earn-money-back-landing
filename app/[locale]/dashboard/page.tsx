@@ -15,10 +15,12 @@ export default function DashboardPage() {
   const [showSuccess, setShowSuccess] = useState(false)
   const [showCancel, setShowCancel] = useState(false)
   
-  // Redirect to login if not authenticated
+  // Redirect to login if not authenticated (with locale)
   useEffect(() => {
     if (!loading && !user) {
-      router.push('/login')
+      // Get current locale from pathname
+      const currentLocale = window.location.pathname.split('/')[1] || 'zh-TW'
+      router.push(`/${currentLocale}/login`)
     }
   }, [user, loading, router])
 
