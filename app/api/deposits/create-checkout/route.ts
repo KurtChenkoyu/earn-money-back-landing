@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!)
-
 /**
  * Create Stripe Checkout Session for deposit
  * 
@@ -11,6 +9,17 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!)
  */
 export async function POST(request: NextRequest) {
   try {
+    // Initialize Stripe inside the handler (not at module level)
+    // This prevents build-time errors when env vars aren't available
+    const stripeSecretKey = process.env.STRIPE_SECRET_KEY
+    if (!stripeSecretKey) {
+      return NextResponse.json(
+        { error: 'STRIPE_SECRET_KEY is not configured' },
+        { status: 500 }
+      )
+    }
+    
+    const stripe = new Stripe(stripeSecretKey)
     const { amount, childId, userId } = await request.json()
     
     // Validate input
