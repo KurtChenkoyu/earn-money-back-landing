@@ -46,10 +46,13 @@ export default function SignupPage() {
     setError(null)
 
     try {
+      // Get current locale from pathname
+      const currentLocale = window.location.pathname.split('/')[1] || 'zh-TW'
+      
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
-          redirectTo: `${window.location.origin}/zh-TW/auth/callback?next=/dashboard`,
+          redirectTo: `${window.location.origin}/${currentLocale}/auth/callback?next=/dashboard`,
         },
       })
 
