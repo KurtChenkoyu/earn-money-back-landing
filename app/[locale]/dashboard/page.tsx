@@ -1,20 +1,31 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { useSearchParams } from 'next/navigation'
+import { useSearchParams, useRouter } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import { DepositForm } from '@/components/deposit/DepositForm'
 import { Link } from '@/i18n/routing'
+import { useAuth } from '@/contexts/AuthContext'
 
 export default function DashboardPage() {
   const t = useTranslations('dashboard')
   const searchParams = useSearchParams()
+  const router = useRouter()
+  const { user, loading } = useAuth()
   const [showSuccess, setShowSuccess] = useState(false)
   const [showCancel, setShowCancel] = useState(false)
   
-  // TODO: Get from auth context once authentication is set up
-  const userId = 'temp-user-id' // Placeholder
-  const childId = 'temp-child-id' // Placeholder
+  // Redirect to login if not authenticated
+  useEffect(() => {
+    if (!loading && !user) {
+      router.push('/login')
+    }
+  }, [user, loading, router])
+
+  // Get user IDs from auth
+  const userId = user?.id || ''
+  // TODO: Get child ID from database (for now, use first child or create one)
+  const childId = 'temp-child-id' // Will be replaced with real child ID from database
 
   useEffect(() => {
     const success = searchParams.get('success')
@@ -33,6 +44,23 @@ export default function DashboardPage() {
       setTimeout(() => setShowCancel(false), 5000)
     }
   }, [searchParams])
+
+  // Show loading state
+  if (loading) {
+    return (
+      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 pt-20 pb-20 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">載入中...</p>
+        </div>
+      </main>
+    )
+  }
+
+  // Don't render if not authenticated (redirect will happen)
+  if (!user) {
+    return null
+  }
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 pt-20 pb-20">

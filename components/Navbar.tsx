@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl'
 import { Link, usePathname, useRouter } from '@/i18n/routing'
 import { trackEvent } from '@/lib/analytics'
 import { useState, useEffect, useRef } from 'react'
+import { useAuth } from '@/contexts/AuthContext'
 
 const languages = [
   { code: 'zh-TW', label: '繁體中文', flag: '🇹🇼' },
@@ -18,6 +19,7 @@ export default function Navbar({ currentLocale }: { currentLocale: string }) {
   const t = useTranslations('navbar')
   const pathname = usePathname()
   const router = useRouter()
+  const { user, signOut } = useAuth()
   const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false)
   const languageMenuRef = useRef<HTMLDivElement>(null)
   
@@ -63,6 +65,38 @@ export default function Navbar({ currentLocale }: { currentLocale: string }) {
           </div>
           
           <div className="flex items-center gap-4">
+            {user ? (
+              <>
+                <Link
+                  href="/dashboard"
+                  className="px-4 py-2 text-sm font-mono font-bold text-cyan-400 border border-cyan-500/30 rounded hover:bg-cyan-900/20 transition-colors"
+                >
+                  控制台
+                </Link>
+                <button
+                  onClick={signOut}
+                  className="px-4 py-2 text-sm font-mono text-gray-400 hover:text-white transition-colors"
+                >
+                  登出
+                </button>
+              </>
+            ) : (
+              <>
+                <Link
+                  href="/login"
+                  className="px-4 py-2 text-sm font-mono text-gray-400 hover:text-white transition-colors"
+                >
+                  登入
+                </Link>
+                <Link
+                  href="/signup"
+                  className="px-4 py-2 text-sm font-mono font-bold text-cyan-400 border border-cyan-500/30 rounded hover:bg-cyan-900/20 transition-colors"
+                >
+                  註冊
+                </Link>
+              </>
+            )}
+            
             <Link
               href="/survey"
               onClick={handleSurveyClick}

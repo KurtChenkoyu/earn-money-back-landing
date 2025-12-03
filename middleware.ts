@@ -1,69 +1,64 @@
-import createMiddleware from 'next-intl/middleware'
+import { createServerClient } from '@supabase/ssr'
+import { NextResponse, type NextRequest } from 'next/server'
 import { routing } from './i18n/routing'
-import { NextRequest, NextResponse } from 'next/server'
 
-// Countries/regions that should default to Traditional Chinese
-const ZH_TW_REGIONS = ['TW', 'HK', 'MO'] // Taiwan, Hong Kong, Macau
+export async function middleware(request: NextRequest) {
+  let response = NextResponse.next({
+    request: {
+      headers: request.headers,
+    },
+  })
 
-function detectLocale(request: NextRequest): string {
-  // Check Vercel's geolocation header (if available)
-  const country = request.geo?.country || request.headers.get('x-vercel-ip-country')
-  
-  // Check Cloudflare's country header (if available)
-  const cfCountry = request.headers.get('cf-ipcountry')
-  
-  // Use the first available country code
-  const detectedCountry = country || cfCountry
-  
-  // Default to Traditional Chinese for Taiwan, Hong Kong, Macau
-  if (detectedCountry && ZH_TW_REGIONS.includes(detectedCountry)) {
-    return 'zh-TW'
-  }
-  
-  // Check Accept-Language header as fallback
-  const acceptLanguage = request.headers.get('accept-language')
-  if (acceptLanguage) {
-    // Check if user prefers Traditional Chinese
-    if (acceptLanguage.includes('zh-TW') || acceptLanguage.includes('zh-Hant')) {
-      return 'zh-TW'
+  // Create Supabase client
+  const supabase = createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      cookies: {
+        getAll() {
+          return request.cookies.getAll()
+        },
+        setAll(cookiesToSet) {
+          cookiesToSet.forEach(({ name, value, options }) => request.cookies.set(name, value))
+          response = NextResponse.next({
+            request,
+          })
+          cookiesToSet.forEach(({ name, value, options }) =>
+            response.cookies.set(name, value, options)
+          )
+        },
+      },
     }
-    // Check if user prefers English
-    if (acceptLanguage.includes('en')) {
-      return 'en'
-    }
-  }
-  
-  // Default to Traditional Chinese (Taiwan) as specified
-  return routing.defaultLocale
-}
+  )
 
-const intlMiddleware = createMiddleware(routing)
+  // Refresh session if expired
+  await supabase.auth.getUser()
 
-export default function middleware(request: NextRequest) {
+  // Handle locale routing (existing i18n logic)
   const pathname = request.nextUrl.pathname
-  
-  // Skip API routes
-  if (pathname.startsWith('/api')) {
-    return NextResponse.next()
+  const pathnameHasLocale = routing.locales.some(
+    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+  )
+
+  if (!pathnameHasLocale) {
+    const locale = routing.defaultLocale
+    return NextResponse.redirect(
+      new URL(`/${locale}${pathname.startsWith('/') ? '' : '/'}${pathname}`, request.url)
+    )
   }
-  
-  // If accessing root, redirect to detected locale
-  if (pathname === '/') {
-    const detectedLocale = detectLocale(request)
-    return NextResponse.redirect(new URL(`/${detectedLocale}`, request.url))
-  }
-  
-  // Use next-intl middleware for locale handling
-  return intlMiddleware(request)
+
+  return response
 }
 
 export const config = {
-  // Match only internationalized pathnames
   matcher: [
-    // Match all pathnames except for
-    // - … if they start with `/api`, `/_next` or `/_vercel`
-    // - … the ones containing a dot (e.g. `favicon.ico`)
-    '/((?!api|_next|_vercel|.*\\..*).*)'
-  ]
+    /*
+     * Match all request paths except for the ones starting with:
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     * - public folder
+     */
+    '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
+  ],
 }
-
