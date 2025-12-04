@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Deployment script for LexiCraft Landing Page
+# Deployment script for lexicraft.xyz Landing Page
 
-echo "🚀 Deploying LexiCraft Landing Page to Vercel"
+echo "🚀 Deploying lexicraft.xyz Landing Page to Vercel"
 echo ""
 
 # Check if Vercel CLI is installed

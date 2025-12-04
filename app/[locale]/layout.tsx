@@ -26,7 +26,7 @@ export async function generateMetadata({
   return {
     title: locale === 'zh-TW' 
       ? '賺錢學單字 - 孩子學單字就能賺錢'
-      : 'LexiCraft - Kids Earn Money by Learning Vocabulary',
+      : 'lexicraft.xyz - Kids Earn Money by Learning Vocabulary',
     description: locale === 'zh-TW'
       ? '孩子透過學習單字賺取真實金錢。家長先投資，孩子努力賺回來。'
       : 'Kids earn real money by mastering vocabulary. Parents invest upfront, kids earn it back.',

@@ -63,7 +63,7 @@ export default function LoginPage() {
       <div className="max-w-md mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-xl shadow-lg p-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-2 text-center">
-            登入 LexiCraft
+            登入 lexicraft.xyz
           </h1>
           <p className="text-gray-600 mb-8 text-center">
             登入您的帳戶以管理孩子的學習進度

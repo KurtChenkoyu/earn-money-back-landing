@@ -1,4 +1,4 @@
-# Deployment Guide - LexiCraft Landing Page
+# Deployment Guide - lexicraft.xyz Landing Page
 
 ## Quick Start
 

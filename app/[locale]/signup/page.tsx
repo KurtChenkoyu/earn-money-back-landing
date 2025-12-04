@@ -82,7 +82,7 @@ export default function SignupPage() {
       <div className="max-w-md mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-xl shadow-lg p-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-2 text-center">
-            註冊 LexiCraft
+            註冊 lexicraft.xyz
           </h1>
           <p className="text-gray-600 mb-8 text-center">
             建立帳戶以開始孩子的學習之旅

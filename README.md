@@ -1,6 +1,6 @@
-# LexiCraft - Landing Page
+# lexicraft.xyz - Landing Page
 
-Landing page for the LexiCraft MVP waitlist collection.
+Landing page for the lexicraft.xyz MVP waitlist collection.
 
 ## Features
 
@@ -171,5 +171,5 @@ The site will be live at `https://your-project.vercel.app`
 
 ## Support
 
-For questions or issues, contact: support@lexicraft.com
+For questions or issues, contact: support@lexicraft.xyz
 

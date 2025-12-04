@@ -110,7 +110,7 @@ export default function DashboardPage() {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-            LexiCraft 家長控制台
+            lexicraft.xyz 家長控制台
           </h1>
           <p className="text-xl text-gray-600">
             管理孩子的學習帳戶與信託資金

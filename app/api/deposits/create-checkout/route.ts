@@ -48,7 +48,7 @@ export async function POST(request: NextRequest) {
           price_data: {
             currency: 'twd',
             product_data: {
-              name: 'LexiCraft Block Trust Package',
+              name: 'lexicraft.xyz Block Trust Package',
               description: 'Deposit for vocabulary learning rewards',
             },
             unit_amount: amount * 100, // Convert NT$ to cents
@@ -67,7 +67,7 @@ export async function POST(request: NextRequest) {
       // Taiwan-specific settings
       locale: 'zh-TW',
       payment_intent_data: {
-        description: `LexiCraft deposit for child ${childId}`,
+        description: `lexicraft.xyz deposit for child ${childId}`,
       },
     })
 

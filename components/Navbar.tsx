@@ -60,8 +60,8 @@ export default function Navbar({ currentLocale }: { currentLocale: string }) {
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <Link href="/" className="text-2xl font-bold font-mono tracking-tighter group">
-              <span className="text-white group-hover:text-neon-cyan transition-colors">Lexi</span>
-              <span className="text-neon-cyan group-hover:text-white transition-colors">Craft</span>
+              <span className="text-white group-hover:text-neon-cyan transition-colors">lexicraft</span>
+              <span className="text-neon-cyan group-hover:text-white transition-colors">.xyz</span>
               <span className="ml-2 text-xs px-2 py-0.5 rounded-full bg-white/10 text-slate-400 border border-white/10">BETA</span>
             </Link>
           </div>
