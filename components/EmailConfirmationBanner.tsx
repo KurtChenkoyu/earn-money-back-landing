@@ -11,9 +11,9 @@ export function EmailConfirmationBanner() {
   const supabase = createClient()
 
   // Check if user needs to confirm email
-  // For now, we'll check Supabase auth user's email_confirmed status
+  // Supabase uses email_confirmed_at (timestamp) - null means not confirmed
   // In production, you'd also check the users table email_confirmed field
-  const needsConfirmation = user && !user.email_confirmed
+  const needsConfirmation = user && !user.email_confirmed_at
 
   if (!needsConfirmation) {
     return null
