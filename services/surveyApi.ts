@@ -11,10 +11,12 @@ import {
   AnswerSubmission,
   QuestionPayload,
   TriMetricReport,
+  QuestionHistoryItem,
+  Methodology,
 } from '../components/survey/types'
 
 // API Configuration
-const API_BASE = process.env.NEXT_PUBLIC_API_URL 
+const API_BASE = process.env.NEXT_PUBLIC_API_URL
   ? `${process.env.NEXT_PUBLIC_API_URL}/api/v1/survey`
   : 'http://localhost:8000/api/v1/survey'
 
@@ -65,5 +67,12 @@ export const surveyApi = {
 }
 
 // Re-export types for convenience
-export type { SurveyResult, QuestionPayload, TriMetricReport, AnswerSubmission }
+export type {
+  SurveyResult,
+  QuestionPayload,
+  TriMetricReport,
+  AnswerSubmission,
+  QuestionHistoryItem,
+  Methodology
+}
 

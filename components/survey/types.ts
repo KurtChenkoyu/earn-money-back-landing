@@ -10,6 +10,10 @@ export interface QuestionOption {
   text: string
   type: 'target' | 'trap' | 'filler' | 'unknown'
   is_correct: boolean
+  sense_id?: string
+  example_zh?: string
+  example_en?: string
+  is_primary_sense?: boolean
 }
 
 export interface QuestionPayload {
@@ -26,11 +30,40 @@ export interface TriMetricReport {
   density: number
 }
 
+export interface QuestionHistoryItem {
+  rank: number
+  correct: boolean
+  time_taken: number
+  word?: string
+  question_id?: string
+  phase?: number
+  selected_option_ids?: string[]
+  correct_option_ids?: string[]
+  all_options?: QuestionOption[]
+  question_number?: number
+}
+
+export interface Methodology {
+  total_questions: number
+  phases: Record<string, any>
+  algorithm: string
+  question_format: string
+  scoring_method: string
+  start_rank: number
+  final_bounds: {
+    low_bound: number
+    high_bound: number
+    range: number
+  }
+}
+
 export interface SurveyResult {
   status: 'continue' | 'complete'
   session_id: string
   payload?: QuestionPayload
   metrics?: TriMetricReport
+  detailed_history?: QuestionHistoryItem[]
+  methodology?: Methodology
   debug_info?: {
     phase?: number
     confidence?: number
@@ -45,9 +78,8 @@ export interface AnswerSubmission {
   time_taken: number
 }
 
-export type SurveyState = 
+export type SurveyState =
   | { type: 'loading' }
   | { type: 'error'; message: string }
-  | { type: 'question'; data: QuestionPayload; sessionId: string; debugInfo?: { phase?: number; question_count?: number; [key: string]: any } }
+  | { type: 'question'; data: QuestionPayload; sessionId: string; debugInfo?: { phase?: number; question_count?: number;[key: string]: any } }
   | { type: 'complete'; metrics: TriMetricReport; sessionId: string }
-

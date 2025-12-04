@@ -22,7 +22,7 @@ export default function Navbar({ currentLocale }: { currentLocale: string }) {
   const { user, signOut } = useAuth()
   const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false)
   const languageMenuRef = useRef<HTMLDivElement>(null)
-  
+
   const handleSurveyClick = () => {
     trackEvent('navbar_survey_clicked')
   }
@@ -55,27 +55,29 @@ export default function Navbar({ currentLocale }: { currentLocale: string }) {
   }, [isLanguageMenuOpen])
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-cyan-500/20">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-cosmic-950/80 backdrop-blur-md border-b border-white/5 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <Link href="/" className="text-xl font-bold text-cyan-400 font-mono">
-              LexiCraft • 字塊所
+            <Link href="/" className="text-2xl font-bold font-mono tracking-tighter group">
+              <span className="text-white group-hover:text-neon-cyan transition-colors">Lexi</span>
+              <span className="text-neon-cyan group-hover:text-white transition-colors">Craft</span>
+              <span className="ml-2 text-xs px-2 py-0.5 rounded-full bg-white/10 text-slate-400 border border-white/10">BETA</span>
             </Link>
           </div>
-          
+
           <div className="flex items-center gap-4">
             {user ? (
               <>
                 <Link
                   href="/dashboard"
-                  className="px-4 py-2 text-sm font-mono font-bold text-cyan-400 border border-cyan-500/30 rounded hover:bg-cyan-900/20 transition-colors"
+                  className="px-4 py-2 text-sm font-mono font-bold text-neon-cyan border border-neon-cyan/30 rounded-lg hover:bg-neon-cyan/10 transition-all shadow-[0_0_10px_rgba(6,182,212,0.1)]"
                 >
                   控制台
                 </Link>
                 <button
                   onClick={signOut}
-                  className="px-4 py-2 text-sm font-mono text-gray-400 hover:text-white transition-colors"
+                  className="px-4 py-2 text-sm font-mono text-slate-400 hover:text-white transition-colors"
                 >
                   登出
                 </button>
@@ -84,23 +86,23 @@ export default function Navbar({ currentLocale }: { currentLocale: string }) {
               <>
                 <Link
                   href="/login"
-                  className="px-4 py-2 text-sm font-mono text-gray-400 hover:text-white transition-colors"
+                  className="hidden sm:block px-4 py-2 text-sm font-mono text-slate-400 hover:text-white transition-colors"
                 >
                   登入
                 </Link>
                 <Link
                   href="/signup"
-                  className="px-4 py-2 text-sm font-mono font-bold text-cyan-400 border border-cyan-500/30 rounded hover:bg-cyan-900/20 transition-colors"
+                  className="px-5 py-2 text-sm font-bold text-white bg-white/10 border border-white/10 rounded-full hover:bg-white/20 hover:scale-105 transition-all backdrop-blur-sm"
                 >
                   註冊
                 </Link>
               </>
             )}
-            
+
             <Link
               href="/survey"
               onClick={handleSurveyClick}
-              className="px-4 py-2 text-sm font-mono font-bold text-cyan-400 border border-cyan-500/30 rounded hover:bg-cyan-900/20 transition-colors"
+              className="hidden md:flex px-5 py-2 text-sm font-bold text-cosmic-950 bg-neon-cyan rounded-full hover:bg-cyan-300 hover:shadow-[0_0_15px_rgba(6,182,212,0.5)] transition-all items-center gap-2"
             >
               <span className="hidden sm:inline">{t('surveyLink')}</span>
               <span className="sm:hidden">{currentLocale === 'zh-TW' ? t('surveyLinkEn') : t('surveyLink')}</span>
@@ -108,16 +110,16 @@ export default function Navbar({ currentLocale }: { currentLocale: string }) {
 
             {/* Language Switcher - Integrated into Navbar */}
             <div className="relative" ref={languageMenuRef}>
-              <button 
+              <button
                 onClick={() => setIsLanguageMenuOpen(!isLanguageMenuOpen)}
-                className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors text-sm font-mono"
+                className="flex items-center space-x-2 text-slate-400 hover:text-white transition-colors text-sm font-mono p-2 rounded-lg hover:bg-white/5"
               >
-                <span>{currentLang.flag}</span>
-                <span className="hidden sm:inline">{currentLang.label}</span>
-                <svg 
-                  className={`w-4 h-4 transition-transform ${isLanguageMenuOpen ? 'rotate-180' : ''}`} 
-                  fill="none" 
-                  viewBox="0 0 24 24" 
+                <span className="text-lg">{currentLang.flag}</span>
+                <span className="hidden lg:inline">{currentLang.label}</span>
+                <svg
+                  className={`w-4 h-4 transition-transform ${isLanguageMenuOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -125,16 +127,16 @@ export default function Navbar({ currentLocale }: { currentLocale: string }) {
               </button>
 
               {isLanguageMenuOpen && (
-                <div className="absolute right-0 mt-2 w-32 bg-slate-900 border border-cyan-500/20 rounded-lg shadow-xl overflow-hidden z-50">
+                <div className="absolute right-0 mt-2 w-40 bg-cosmic-900 border border-white/10 rounded-xl shadow-2xl overflow-hidden z-50 animate-fade-in-up">
                   {languages.map((lang) => (
                     <button
                       key={lang.code}
                       onClick={() => switchLanguage(lang.code)}
-                      className={`w-full text-left px-4 py-3 text-xs font-mono hover:bg-slate-800 flex items-center space-x-3 transition-colors
-                        ${currentLang.code === lang.code ? 'text-cyan-400 bg-slate-800/50' : 'text-gray-400'}
+                      className={`w-full text-left px-4 py-3 text-sm font-mono hover:bg-white/5 flex items-center space-x-3 transition-colors
+                        ${currentLang.code === lang.code ? 'text-neon-cyan bg-white/5' : 'text-slate-400'}
                       `}
                     >
-                      <span>{lang.flag}</span>
+                      <span className="text-lg">{lang.flag}</span>
                       <span>{lang.label}</span>
                     </button>
                   ))}

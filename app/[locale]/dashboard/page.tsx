@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import { DepositForm } from '@/components/deposit/DepositForm'
+import { EmailConfirmationBanner } from '@/components/EmailConfirmationBanner'
 import { Link } from '@/i18n/routing'
 import { useAuth } from '@/contexts/AuthContext'
 
@@ -67,6 +68,9 @@ export default function DashboardPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 pt-20 pb-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Email Confirmation Banner */}
+        <EmailConfirmationBanner />
+        
         {/* Success Message */}
         {showSuccess && (
           <div className="mb-6 bg-green-50 border border-green-200 text-green-800 px-6 py-4 rounded-lg flex items-center justify-between">

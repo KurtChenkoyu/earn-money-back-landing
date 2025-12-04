@@ -1,15 +1,15 @@
 {
   "hero": {
     "headline": "You Invest, They Mine. Knowledge and Wealth, Inherited Together.",
-    "subtitle": "LexiCraft • 字塊所: Taiwan's First Knowledge Asset Exchange. Turn tuition into unlockable blocks.",
-    "description": "We don't sell courses, we sell future assets. Every word is a block waiting to be unlocked.",
+    "subtitle": "lexicraft.xyz • 字塊所: Taiwan's First Knowledge Asset Exchange. Turn tuition into unlockable blocks.",
+    "description": "We don't sell courses, we sell future assets. Every word is a block waiting to be unlocked. Complete learning journey from A to Z.",
     "valueProp1": "Block Trust: Your money stays locked in blocks until they prove recognition",
     "valueProp2": "Brain Mining: Kids unlock blocks through validation, earning real rewards",
     "valueProp3": "Asset Exchange: Transform education spending into transferable knowledge assets",
     "cta": "CHECK ASSET VALUE",
     "ctaSecondary": "Join Waitlist",
     "trustBar": "🔒 Withdraw anytime | ✓ Verified $5M+ | 📊 99.54% accuracy",
-    "platformName": "LexiCraft • 字塊所"
+    "platformName": "lexicraft.xyz • 字塊所"
   },
   "navbar": {
     "surveyLink": "START BLOCK SURVEY",
@@ -117,7 +117,7 @@
   },
   "faq": {
     "title": "Frequently Asked Questions",
-    "subtitle": "Everything you need to know about LexiCraft • 字塊所",
+    "subtitle": "Everything you need to know about lexicraft.xyz • 字塊所",
     "teaching": {
       "question": "Do you teach English?",
       "answer": "No, we don't teach English. We are a verification platform, not a teaching platform. Children learn elsewhere (school, cram school), we verify if they recognize foundation elements."
@@ -188,7 +188,7 @@
     "privacy": "Privacy Policy",
     "contact": "Contact",
     "questions": "Questions? Reach out to us at",
-    "copyright": "© {year} LexiCraft • 字塊所. All rights reserved.",
+    "copyright": "© {year} lexicraft.xyz • 字塊所. All rights reserved.",
     "taiwan": "Designed for Taiwan market. Parent accounts required for users under 20."
   },
   "language": {
@@ -243,7 +243,7 @@
       "use1": "Send you updates about our beta launch and product development",
       "use2": "Notify you when the platform is ready for beta testing",
       "use3": "Plan our beta program based on family sizes",
-      "use4": "Send you relevant information about the LexiCraft platform",
+      "use4": "Send you relevant information about the lexicraft.xyz platform",
       "noShare": "We do not sell, rent, or share your personal information with third parties for marketing purposes."
     },
     "section3": {

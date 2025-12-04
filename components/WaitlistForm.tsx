@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { usePathname } from '@/i18n/routing'
 import { trackEvent } from '@/lib/analytics'
+import { PartyPopper } from 'lucide-react'
 
 export default function WaitlistForm() {
   const t = useTranslations('waitlist')
@@ -68,7 +69,7 @@ export default function WaitlistForm() {
 
         {status === 'success' ? (
           <div className="bg-white text-gray-900 rounded-lg p-8 text-center">
-            <div className="text-6xl mb-4">🎉</div>
+            <div className="mb-4"><PartyPopper size={64} className="text-primary-600" /></div>
             <h3 className="text-2xl font-bold mb-4">{t('success.title')}</h3>
             <p className="text-gray-600 mb-6">
               {t('success.message')}

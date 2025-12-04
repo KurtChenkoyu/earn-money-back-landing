@@ -6,16 +6,16 @@ import { trackEvent } from '@/lib/analytics'
 
 export default function VocabularyCliff() {
   const t = useTranslations('vocabularyCliff')
-  
+
   const handleSurveyClick = () => {
     trackEvent('vocabulary_cliff_survey_clicked')
   }
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="section-light">
+      <div className="section-container">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-6">
             {t('title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
@@ -23,7 +23,7 @@ export default function VocabularyCliff() {
           </p>
         </div>
 
-        <div className="bg-white rounded-xl p-8 shadow-lg max-w-4xl mx-auto">
+        <div className="bg-white rounded-2xl p-8 shadow-xl max-w-4xl mx-auto border border-gray-100">
           <div className="mb-8">
             <table className="w-full text-left">
               <thead>
@@ -53,20 +53,20 @@ export default function VocabularyCliff() {
             </table>
           </div>
 
-          <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded">
-            <p className="text-gray-800 leading-relaxed">
+          <div className="bg-gradient-to-r from-blue-50 to-cyan-50 border-l-4 border-primary-600 p-6 rounded-lg mb-8">
+            <p className="text-gray-800 leading-relaxed font-medium">
               {t('diagnostic')}
             </p>
           </div>
 
-          <div className="mt-8 text-center">
-            <p className="text-lg font-semibold text-gray-900 mb-4">
+          <div className="text-center">
+            <p className="text-lg font-bold text-gray-900 mb-6">
               {t('keyQuestion')}
             </p>
             <Link
               href="/survey"
               onClick={handleSurveyClick}
-              className="inline-block px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white rounded-lg font-bold tracking-wider shadow-lg shadow-cyan-900/20 transition-all"
+              className="inline-block px-8 py-4 bg-gradient-to-r from-primary-600 to-cyan-600 hover:from-primary-500 hover:to-cyan-500 text-white rounded-full font-bold tracking-wide shadow-lg hover:shadow-xl transition-all hover:scale-105"
             >
               {t('cta')}
             </Link>

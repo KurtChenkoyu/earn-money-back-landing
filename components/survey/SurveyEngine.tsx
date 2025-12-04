@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useEffect, useState, useCallback } from 'react'
-import { surveyApi, SurveyResult, QuestionPayload, TriMetricReport } from '../../services/surveyApi'
+import { surveyApi, SurveyResult, QuestionPayload, TriMetricReport, QuestionHistoryItem, Methodology } from '../../services/surveyApi'
 import MultiSelectMatrix from './MultiSelectMatrix'
 import SurveyResultDashboard from './SurveyResultDashboard'
 import SurveyProgress from './SurveyProgress'
@@ -18,6 +18,10 @@ const SurveyEngine: React.FC<SurveyEngineProps> = ({ initialCefr, onExit }) => {
   const [sessionId, setSessionId] = useState<string | null>(null)
   const [currentQuestion, setCurrentQuestion] = useState<QuestionPayload | null>(null)
   const [finalMetrics, setFinalMetrics] = useState<TriMetricReport | null>(null)
+  
+  // New reporting state
+  const [detailedHistory, setDetailedHistory] = useState<QuestionHistoryItem[] | undefined>(undefined)
+  const [methodology, setMethodology] = useState<Methodology | undefined>(undefined)
   
   // Calibration state
   const [selectedCefr, setSelectedCefr] = useState<string | undefined>(undefined)
@@ -50,6 +54,13 @@ const SurveyEngine: React.FC<SurveyEngineProps> = ({ initialCefr, onExit }) => {
 
     if (result.status === 'complete' && result.metrics) {
       setFinalMetrics(result.metrics)
+      // Extract detailed history and methodology
+      if (result.detailed_history) {
+        setDetailedHistory(result.detailed_history)
+      }
+      if (result.methodology) {
+        setMethodology(result.methodology)
+      }
       setStatus('complete')
     } else if (result.payload) {
       setCurrentQuestion(result.payload)
@@ -158,7 +169,14 @@ const SurveyEngine: React.FC<SurveyEngineProps> = ({ initialCefr, onExit }) => {
   }
 
   if (status === 'complete' && finalMetrics) {
-    return <SurveyResultDashboard metrics={finalMetrics} onExit={onExit} />
+    return (
+      <SurveyResultDashboard 
+        metrics={finalMetrics} 
+        detailedHistory={detailedHistory}
+        methodology={methodology}
+        onExit={onExit} 
+      />
+    )
   }
 
   if (status === 'active' && currentQuestion) {

@@ -1,7 +1,7 @@
 {
   "hero": {
     "headline": "你出資，他挖礦。知識與財富，同步繼承。",
-    "subtitle": "LexiCraft • 字塊所：全台首創知識資產交易所。把補習費轉成待解鎖的字塊。",
+    "subtitle": "lexicraft.xyz • 字塊所：全台首創知識資產交易所。把補習費轉成待解鎖的字塊。",
     "description": "我們不賣課程，我們販售「未來的資產」。每一個單字都是一塊待琢磨的金磚。",
     "valueProp1": "字塊信託：您的錢鎖在字塊裡，直到他們證明認識",
     "valueProp2": "腦力挖礦：孩子透過驗證解鎖字塊，賺取真實獎勵",
@@ -9,7 +9,7 @@
     "cta": "檢測資產",
     "ctaSecondary": "加入候補名單",
     "trustBar": "🔒 隨時提領 | ✓ 已驗證 $5,000,000+ | 📊 99.54%準確度",
-    "platformName": "LexiCraft • 字塊所"
+    "platformName": "lexicraft.xyz • 字塊所"
   },
   "navbar": {
     "surveyLink": "啟動字塊探勘",
@@ -117,7 +117,7 @@
   },
   "faq": {
     "title": "常見問題",
-    "subtitle": "關於 LexiCraft • 字塊所 您需要知道的一切",
+    "subtitle": "關於 lexicraft.xyz • 字塊所 您需要知道的一切",
     "teaching": {
       "question": "你們教英文嗎？",
       "answer": "不，我們不教英文。我們是驗證平台，不是教學平台。孩子在其他地方學習（學校、補習班），我們驗證他們是否認識基礎元素。"
@@ -188,7 +188,7 @@
     "privacy": "隱私權政策",
     "contact": "聯絡我們",
     "questions": "有問題？請聯絡我們：",
-    "copyright": "© {year} LexiCraft • 字塊所。版權所有。",
+    "copyright": "© {year} lexicraft.xyz • 字塊所。版權所有。",
     "taiwan": "專為台灣市場設計。20歲以下用戶需由家長帳戶管理。"
   },
   "language": {
@@ -243,7 +243,7 @@
       "use1": "發送關於搶先體驗推出和產品開發的更新",
       "use2": "在平台準備好進行搶先體驗測試時通知您",
       "use3": "根據家庭規模規劃我們的搶先體驗計劃",
-      "use4": "發送關於 LexiCraft 平台的相關資訊",
+      "use4": "發送關於 lexicraft.xyz 平台的相關資訊",
       "noShare": "我們不會為了行銷目的向第三方出售、出租或分享您的個人資訊。"
     },
     "section3": {

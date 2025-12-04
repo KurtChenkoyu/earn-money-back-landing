@@ -20,7 +20,7 @@ export default function SignupPage() {
     setError(null)
 
     try {
-      const { error } = await supabase.auth.signUp({
+      const { data, error } = await supabase.auth.signUp({
         email,
         password,
         options: {
@@ -32,8 +32,22 @@ export default function SignupPage() {
 
       if (error) throw error
 
-      // Redirect to dashboard after signup
-      router.push('/dashboard')
+      // Check if email confirmation is required
+      if (data.user && !data.session) {
+        // Email confirmation required - show success message (not error)
+        // User can still use the app, but should confirm for sensitive actions
+        setError(null)
+        // Show success message instead
+        alert('註冊成功！請檢查您的電子郵件以確認帳戶。確認後即可啟用提款功能。')
+        // Redirect to login so they can log in after confirming
+        router.push('/login')
+        return
+      }
+
+      // If session exists, redirect to dashboard immediately
+      if (data.session) {
+        router.push('/dashboard')
+      }
     } catch (error: any) {
       setError(error.message || '註冊失敗，請重試')
     } finally {
